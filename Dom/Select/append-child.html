@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Append Child List </title>
+</head>
+<body>
+    <ul id="lilist">TotalList
+        <li>name</li>
+        <li>roll</li>
+        <li>id</li>
+        <li>class</li>
+    </ul>
+    <script>
+        let selectUl=document.getElementById("lilist")
+
+        // Create a new element of teh li, and set the value:
+        
+        let storeLi=document.createElement("li")
+        storeLi.innerHTML="last List"
+
+        selectUl.appendChild("storeLi")
+        // also can change the content:
+        selectUl.innerHTML="Replace Content"
+    </script>
+</body>
+</html>

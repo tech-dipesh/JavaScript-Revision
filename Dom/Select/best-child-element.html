@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sibling and Child Element:</title>
+</head>
+
+<body>
+    <div class="title"><h3>Value</h3>
+      <h2>firstChil</h2>
+      <h3 class="Top">SEcondValu</h3>
+      <h4>Third Value</h4>
+      <h3>Fourth Value</h3>
+    </div>
+</body>
+  <script>
+      let parentValue=document.querySelector(".Top")
+      // console.log(parentValue.firstChild);
+      console.log(parentValue.previousElementSibling);
+      console.log(parentValue.previousSibling);
+
+
+      // Next Child:
+      console.log(parentValue.nextElementSibling);
+      console.log(parentValue.nextSibling);
+
+  </script>
+</html>

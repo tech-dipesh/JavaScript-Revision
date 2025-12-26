@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get the child Element</title>
+</head>
+
+<body>
+    <h2 id="parent">Child Element Value<h3 id="hello">Value</h3>
+        <h3 id="hello4">Hello Child Value:</h3>
+    </h2>
+
+
+
+    <div class="topValue"><h3>Value</h3>
+      <h3>firstChil</h3>
+      <h3>SEcondValu</h3>
+      <h3>Third Value</h3>
+      <h3>Fourth Value</h3>
+    </div>
+</body>
+  <script>
+    let topHead=document.querySelector(".topValue")
+    // console.log(topHead.firstChild());
+    console.log(topHead.firstChild);
+    console.log(topHead.firstElementChild);
+    console.log(topHead.lastChild);
+    console.log(topHead.lastElementChild);
+
+    console.log(`Child Nodes: ${topHead.childNodes}`);
+    console.log(`Child Nodes: ${topHead.children}`);
+    console.log(`Child Nodes: ${topHead.childElementCount}`);
+  </script>
+</html>
