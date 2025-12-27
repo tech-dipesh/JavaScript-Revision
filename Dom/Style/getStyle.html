@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get the style of teh style:</title>
+</head>
+<body>
+    <div id="main">
+
+      <h1 style="background-color: red; color: green; font-size: 2rem;">This is the h1</h1>
+      <h2 id="head2" style="background-color: green; color: red; font-size: 4rem; width: 95px; height: 150px;">This is the h2</h2>
+    </div>
+
+    <script>
+      let mainSelect=document.getElementById("head2")
+      let selectLast=mainSelect.lastElementChild;
+            mainSelect.style.marginTop="20 px"
+            mainSelect.style.height-="30px"
+      console.log(mainSelect.style.color);
+    </script>
+</body>
+</html>

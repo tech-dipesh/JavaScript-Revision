@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>getComputedStyle:</title>
+  <style>
+    #head2 {
+      padding: 20px;
+      margin: 35px;
+      cursor: pointer;
+      background-color: green;
+      color: red;
+      font-size: 4rem;
+      width: 250px;
+      height: 250px;
+    }
+    h1{
+      background-color: red; color: green; font-size: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main" >
+    <h1 class="firsth1, secondH2 thirdH3">This is the h1</h1>
+    <h2 id="head2">This is the h2</h2>
+  </div>
+
+  <script>
+    let mainSelect = document.getElementById("head2")
+    let h1Select=document.querySelector("h1")
+
+
+    h1Select.classList+="fourthH4"
+    h1Select.classList.remove("firsth1")
+    console.log(h1Select.className);
+    // Check whether exist or not:
+
+    h1Select.classList.toggle("firsth1")
+    console.log(h1Select.classList.contains("secondH2"));
+  </script>
+</body>
+
+</html>
