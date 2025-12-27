@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remove Event Listenrr</title>
+</head>
+<body>
+    <button>Remove Event</button>
+    <script>
+      let btn=document.querySelector("button")
+      function buttonOperatoin(){
+        console.log("Add event listener is occured.");
+      }
+      btn.addEventListener("click", buttonOperatoin)
+
+      // remove event to free up memory:
+      btn.removeEventListener("click", buttonOperatoin)
+    </script>
+</body>
+</html>

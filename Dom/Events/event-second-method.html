@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Occuring</title>
+</head>
+<body>
+  <input type="text" name="ValueParam" id="WithReign">
+  <button id="Nameprint">Submit me</button>
+  <button id="secondName">Second Submissoin</button>
+  <script>
+      let First=document.getElementById("Nameprint")
+      // First.onclick=console.log("On Click is occured.");
+      First.onclick=function(){
+          console.log("button is Clicked");
+      }
+      First.onclick=function(){
+          console.log(this);
+      }
+  </script>
+</body>
+</html>

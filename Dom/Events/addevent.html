@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>addEventListener</title>
+</head>
+<body>
+    <button id="val">Button Click</button>
+    <button id="second">SEcond Click</button>
+    <script>
+        let selectButton=document.getElementById("val")
+        selectButton.addEventListener("click", function(){
+            console.log('You click on the click button.');
+        }) 
+
+        // pass the external function:
+        function secondFunction(){
+          console.log("Second event is occured.");
+        }
+        let secondButton=document.getElementById("second")
+        secondButton.addEventListener("click", secondFunctionr)
+    </script>
+</body>
+</html>

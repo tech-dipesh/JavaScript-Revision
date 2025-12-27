@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Delegation:</title>
+</head>
+<body>
+  <div id="headEvent">
+      <h1>First H1</h1>
+      <h2>SEcond H2</h2>
+      <h3>Third H3</h3>
+      <h4>Fouth H4</h4>
+      <button id="val">Button</button>
+  </div>
+  <script>
+    let headValue=document.getElementById('headEvent');
+    headValue.addEventListener("click", (e)=>{
+      console.log(e.target.tagName);
+      if(e.target.id=="val"){
+        console.log("Button is clicked.");
+      }
+    })
+  </script>
+</body>
+</html>
