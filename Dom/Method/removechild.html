@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>remove Child Method</title>
+</head>
+
+<body>
+  <p>Remove child Method:</p>
+  <h1 id="removeChild">Task to remove teh h3 element.
+      <p>First</p>
+      <p>Second</p>
+      <p>Third</p>
+      <p>Fourth</p>
+    </h1>
+    <script>
+      let removeTheChild = document.getElementById("removeChild")
+      console.log(removeTheChild.firstElementChild);
+      removeTheChild.removeChild(removeTheChild.firstElementChild)
+    </script>
+</body>
+</html>

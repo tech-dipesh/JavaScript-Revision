@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>insert Before a node or after The Nod</title>
+</head>
+<body>
+  
+  <h1>insert Before a node or after The Nod</h1>
+
+  <div id="divValue">
+    <h1>Test First</h1>
+  </div>
+  <script>
+      let selectDiv=document.getElementById("divValue")
+
+      let createNewP=document.createElement("p")
+      createNewP.innerHTML="It's the p content that we looking for."
+      selectDiv.insertBefore(createNewP, createNewP.firstElementChild)
+  </script>
+</body>
+</html>

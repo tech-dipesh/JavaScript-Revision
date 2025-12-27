@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insert at the position</title>
+</head>
+<body>
+    <h3>Sample h3 code</h3>
+
+    <div id="div">This is teh div content
+        <h4 id="h4">Wrap the h4 inside a div.</h4>
+        <h4 id="h4">Wrap the second h4 inside a div.</h4>
+        <h4 id="h4">Wrap the third h4 inside a div.</h4>
+        <h4 id="h4">Wrap the fourth h4 inside a div.</h4>
+        <h4 id="h4">Wrap the fifth h4 inside a div.</h4>
+    </div>
+    <script>
+          let selectDiv=document.getElementById("div")
+
+          let whatElementInsert=document.createElement("h3")
+        whatElementInsert.innerHTML="h3 content" 
+        whatElementInsert.style.color="red"
+          selectDiv.insertAdjacentElement("afterend", whatElementInsert)
+    </script>
+</body>
+</html>

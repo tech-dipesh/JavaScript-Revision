@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clonse Node Approach</title>
+</head>
+<body>
+    <h3>Clone Node code approach,</h3>
+
+
+    <h4 id="H4Parent">Desendent Clone: 
+        <ul>List Copy</ul>
+        <ul>Second Copy</ul>
+        <ul>Thid Copy</ul>
+    </h4>
+    <script>
+          let selectH3=document.querySelector("h3")
+          let copyNnode=selectH3.cloneNode()
+
+          // console.log(copyNnode.inner);
+
+
+          let seelctH4parent=document.getElementById("H4Parent")
+
+
+          let copytotheNode=seelctH4parent.cloneNode(true)
+          console.log(copytotheNode);
+    </script>
+</body>
+</html>

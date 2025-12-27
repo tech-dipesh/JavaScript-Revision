@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>After Method</title>
+</head>
+<body>
+  <h2>After method help us to insert one or more node after the element.</h2>
+
+
+  <div id="ids">Div Name
+    <h3 id="name">Name</h3>
+    <h4 id="newList">nwe List</h4>
+  </div>
+  <script>
+      // After method help us to add the node after that element.
+
+      const selectDiv=document.getElementById("ids")
+
+      let createNewH1=document.createElement("h1")
+
+      createNewH1.innerHTML="This is a h1 element."
+      let createNewH2=document.createElement("h2")
+      createNewH2.innerHTML="This is a h2 element, lastElement."
+      selectDiv.after(createNewH1, createNewH2)
+  </script>
+</body>
+</html>
