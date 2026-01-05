@@ -12,4 +12,3 @@ let objectAge=objectList.Age
 let{ Age, hometown, Passion}=objectList;
 console.log(updatedHometown);
 console.log(Age, hometown, Passion);
-
