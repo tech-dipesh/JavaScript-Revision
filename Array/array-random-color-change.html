@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTml</title>
+</head>
+<body>
+  <button>Submit</button>
+  <script>
+    let btn=document.querySelector("button")
+    let p=document.createElement("p");
+    let arr=['red', 'green', 'blue', 'yellow']
+    
+    btn.addEventListener("click", ()=>{
+        let randomValue=Math.floor(Math.random()*3);
+        document.body.style.backgroundColor=arr[randomValue];
+        p.innerText=arr[randomValue];
+        p.style.color=arr[randomValue]
+        document.body.appendChild(p);
+    })
+  </script>
+</body>
+</html>
