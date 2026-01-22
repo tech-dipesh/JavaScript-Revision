@@ -1,0 +1,11 @@
+console.log(2934/238);
+
+let jkl23=923897492
+let shdk=93247
+console.log(jkl23/shdk);
+
+
+let a=29384923284293640128304601234701347012324124706324801
+let b=9283423
+
+console.log(a/b);
