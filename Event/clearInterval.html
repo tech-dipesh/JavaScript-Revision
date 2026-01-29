@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClearInterval</title>
+</head>
+<body>
+  <button>Start</button>
+  <div id="show"></div>
+  <script>
+    let count=0;
+    const select=document.getElementById("show")
+    document.querySelector("button").addEventListener("click", ()=>{
+      let getTime=setInterval(() => {
+        count+=1;
+        select.innerText=count  ;
+        if(count==10){
+          clearInterval(getTime)
+          return;
+        }
+      }, 1000);
+    })
+  </script>
+</body>
+</html>

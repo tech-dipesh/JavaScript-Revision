@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>html</title>
+</head>
+<body>
+  <table>
+    <tr>Movie</tr>
+    <tr>Release year</tr>
+    <tr>Director</tr>
+  </table>
+  <script>
+    let selectTable=document.querySelector("table")
+
+      let fetchFun=async(f)=>{
+        let fetchData=await fetch("https://www.omdbapi.com/?t=oppenheimer&apikey=7e268f3e");
+        let convertToJson=await fetchData.json();
+        try {
+          if(!(fetchData.ok)) throw fetchData.statusText();
+          // let createTd=document.createElement("td")
+          let titleFetch=document.createElement("td")
+          let yearFetch=document.createElement("td")
+          let directorFetch=document.createElement("td")
+          titleFetch.innerText=convertToJson.Title
+          yearFetch.innerText=convertToJson.Year
+          directorFetch.innerText=convertToJson.Actors
+          // selectTable.append(titleFetch, yearFetch, directorFetch)
+          selectTable.appendChild(titleFetch)
+          selectTable.appendChild(yearFetch)
+          selectTable.appendChild(directorFetch)
+          console.log(titleFetch.innerText);
+          console.log(yearFetch.innerText);
+          console.log(directorFetch.innerText);
+          // selectTable.appen
+        } catch (error) {
+          console.log(error);
+        }
+        
+        console.log(convertToJson);
+
+      }
+      fetchFun();
+  </script>
+</body>
+</html>
