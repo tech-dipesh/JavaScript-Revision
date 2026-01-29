@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Storage</title>
+</head>
+<body>
+    <h2>This will be stored a name and age with based on teh input change:
+      <h3>Your name is: <div id="name"></div></h3>
+      <button id="editName">edit</button>
+      <h3>Your Age is: <div id="age"></div></h3>
+      <button id="editAge">edit Age</button>
+
+
+      <button id="Remove">REmove Everything:</button>
+      <script>
+          let name=document.getElementById('name');
+          let age=document.getElementById('age');
+
+          let nameInput=document.getElementById('editName');
+          let ageInput=document.getElementById('editAge');
+
+          nameInput.addEventListener("click", ()=>{
+              let inputValue=prompt("Please enter your updated Name")
+              if(inputValue==''){
+                return;
+              }
+              localStorage.setItem(1, inputValue)
+              name.innerText=inputValue;
+            })
+            ageInput.addEventListener('click', ()=>{
+              let inputValue=prompt("Please enter your updated Name")
+              if(inputValue==''){
+                return;
+              }
+            localStorage.setItem(2, inputValue)
+              age.innerText=inputValue
+          })
+          name.innerText=localStorage.getItem(1) || 'Dipesh';          
+          age.innerText=localStorage.getItem(2) || 20;          
+
+
+          let Remove=document.getElementById('Remove');
+          Remove.addEventListener('click', ()=>{
+            //  localStorage.removeItem()
+            localStorage.clear()
+             location.reload()
+          })
+          
+      </script>
+    </h2>
+</body>
+</html>

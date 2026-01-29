@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>localStorage</title>
+</head>
+<body>
+  <h2>Local Storage Data</h2>
+  <div id="btn"></div>
+  <div id="d"></div>
+  
+  <script>
+    
+    // set localStorage Data:
+    let setData="This is the testin localStorage Data"
+    localStorage.setItem("first", setData)
+
+
+    let selectData=document.getElementById("d")
+    let output=localStorage.getItem("first")
+    selectData.innerText=output;
+    console.log(selectData);
+    selectData.innerText=output
+  </script>
+</body>
+</html>

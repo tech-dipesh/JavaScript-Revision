@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter Buttons</title>
+</head>
+<body>
+  <button id="show"></button>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <button id="btn">upvote Me</button>
+  <script>
+    let showId=document.getElementById('show');
+    let btn=document.getElementById('btn');
+    let count=localStorage.getItem(1) || 0
+    showId.innerText=localStorage.getItem(1) || 0;
+    btn.addEventListener('click', ()=>{
+      console.log("button click");
+      count++;
+      localStorage.setItem(1, count)
+      showId.innerText=count;
+      })
+      
+  </script>
+</body>
+</html>

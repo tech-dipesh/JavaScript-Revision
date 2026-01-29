@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Name Local Storagee</title>
+</head>
+
+<body>
+  <h1>Hello <div id="name">Dipesh Sharma</div>
+  </h1>
+  <input type="text" placeholder="Enter your name" id="val">
+  <button id="sub">Submit</button>
+  <script>
+    let val = document.getElementById('name');
+    let nameValue = document.getElementById('val');
+    let sub=document.getElementById('sub');
+    
+    sub.addEventListener('click', ()=>{
+      let output=nameValue.value;
+      localStorage.setItem("1", output)
+
+        
+      console.log("Get Value", localStorage.getItem("1"));
+      location.reload()
+    })
+    
+    
+    // When the page load it should show this:
+    window.addEventListener("load", ()=>{
+      val.innerText=localStorage.getItem(1)
+    })
+  </script>
+</body>
+
+</html>

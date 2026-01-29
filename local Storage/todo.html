@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do with localStorage</title>
+</head>
+
+<body>
+  <input type="text" placeholder="Please enter your data." id="inputData">
+  <button id="submit">Submit</button>
+  <div>
+  </div>
+  <script>
+      let selectInput=document.getElementById('inputData');
+      let submit=document.getElementById('submit');
+
+
+      let count=1;
+      submit.addEventListener("click", ()=>{
+        if(selectInput.value==""){
+          return;
+        }
+        let div=document.querySelector('div');
+        let liCreate=document.createElement("li")
+        liCreate.innerText=selectInput.value.trim();
+        div.appendChild(liCreate)
+
+        localStorage.setItem("list", (count++, selectInput.value.trim(), new Date()))
+
+        selectInput.value=""
+        // location.reload();
+      })
+  </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object Store on localStorage</title>
+</head>
+
+<body>
+  <input type="text" id="int" placeholder="Please add your data:">
+  <h1>Your Current Typing: </h1>
+  <button id="addNew">add New</button>
+  <div></div>
+
+  <button id="remove">Remove</button>
+  <script>
+    let int = document.getElementById('int');
+    let remove = document.getElementById('remove');
+    let div=document.querySelector('div');
+    let addN=document.getElementById('addNew');
+    let count=0;
+    addN.addEventListener('click', () => {
+      let parg=document.createElement("p")
+      parg.innerText=int.value;
+        div.appendChild(parag)
+        localStorage.setItem(count++, h1.innerText)
+    })
+
+    let h1=document.querySelector('h1');
+
+    int.addEventListener("suspend", ()=>{
+        h1.innerText=""
+    })
+    int.addEventListener("input", ()=>{
+        h1.innerText+=int.value;
+    })
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Storage</title>
+</head>
+<body>
+    <h2>This will be stored a name and age with based on teh input change:
+      <h3>Your name is: <div id="name"></div></h3>
+      <h3>Your Age is: <div id="age"></div></h3>
+
+      <input type="text" id="name-input" placeholder="Please enter your name">
+      <input type="number" id="age-input" placeholder="Please enter your name">
+      <script>
+          let name=document.getElementById('name');
+          let age=document.getElementById('age');
+
+          let nameInput=document.getElementById('name-input');
+          let ageInput=document.getElementById('age-input');
+
+          nameInput.addEventListener("input", ()=>{
+              localStorage.setItem(1, nameInput.value)
+              name.innerText=nameInput.value
+            })
+            ageInput.addEventListener('input', ()=>{
+            localStorage.setItem(2, ageInput.value)
+              age.innerText=ageInput.value
+          })
+          name.innerText=localStorage.getItem(1);          
+          age.innerText=localStorage.getItem(2);          
+
+      </script>
+    </h2>
+</body>
+</html>
