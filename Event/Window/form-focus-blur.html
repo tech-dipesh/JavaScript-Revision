@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Blur and Focus of With Js</title>
+</head>
+<body>
+  <form id="form">
+     <input type="text" name="name" id="input">
+     <button name="btn" id="btn">Submit</button>
+  </form>
+  <script>
+    input.onfocus=()=>{
+      // if((form.name.value)){
+        form.btn.value="Enter Name;"
+      // }
+    }
+    input.onblur=()=>{
+      if(!(form.name.value)){
+        form.btn.value="Please enter your name"
+      }
+    }
+  </script>
+</body>
+</html>
