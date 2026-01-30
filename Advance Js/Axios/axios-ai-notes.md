@@ -1,19 +1,15 @@
 # Axios Deep Dive - Vanilla JS Fundamentals
 
-## What is Axios?
-
 Axios is a promise-based HTTP client for the browser that makes it easier to send HTTP requests and handle responses. It's basically a cleaner, more powerful alternative to the native `fetch()` API.
 
 ## Setup (Browser)
 
-Include Axios via CDN in your HTML:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 ```
 
 ## Core Concept: HTTP Requests
-
 Axios revolves around making HTTP requests. The basic syntax:
 
 ```javascript
@@ -26,7 +22,7 @@ axios.method(url, config)
 ```javascript
 axios.get('https://jsonplaceholder.typicode.com/posts/1')
   .then(response => {
-    console.log(response.data); // The actual data
+    console.log(response.data); 
   })
   .catch(error => {
     console.error('Error:', error);
@@ -99,10 +95,10 @@ When Axios receives a response, it gives you an object with:
 ```javascript
 axios.get('https://api.example.com/data')
   .then(response => {
-    console.log(response.data);      // The actual response data
-    console.log(response.status);    // HTTP status code (200, 404, etc.)
-    console.log(response.statusText); // Status message ("OK", "Not Found")
-    console.log(response.headers);   // Response headers
+    console.log(response.data);    
+    console.log(response.status);  
+    console.log(response.statusText); 
+    console.log(response.headers);  
     console.log(response.config);    // Original request configuration
   });
 ```
